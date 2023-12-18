@@ -9,6 +9,7 @@ const SignUp: React.FC = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
 
 
@@ -26,7 +27,7 @@ const SignUp: React.FC = () => {
       }
     } catch (error) {
       console.error(error);
-      
+      setError('Invalid email. Please try again.');
     }
   };
 
@@ -57,6 +58,7 @@ const SignUp: React.FC = () => {
             required
           />
         </div>
+        {error && <p className='text-red-500'>{error}</p>}
 
         <div className='mt-5'>
           <div>
