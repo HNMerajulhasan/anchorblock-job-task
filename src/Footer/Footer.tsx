@@ -30,7 +30,7 @@ const Footer = () => {
             </ul>
         </div>
         <hr className="my-8 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-lg  sm:text-center text-sky-400">© 2023 Designed & Developed By<Link to="https://flowbite.com/" className="hover:underline text-sky-300 text-[18px] font-bold"> H.M Merajul Hasan</Link>. All Rights Reserved.</span>
+        <span className="block text-lg  sm:text-center text-sky-400">© 2023 Designed & Developed By<Link to="https://merajulhasanlatestportfolio.netlify.app/" className="hover:underline text-sky-300 text-[18px] font-bold"> H.M Merajul Hasan</Link>. All Rights Reserved.</span>
     </div>
 </footer>
 
