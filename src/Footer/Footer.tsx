@@ -10,7 +10,7 @@ const Footer = () => {
 <footer className="bg-[#6941c6] lg:h-[23vh]  shadow ">
     <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
-            <Link to="https://merajulhasanlatestportfolio.netlify.app/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+            <Link to="https://merajulhasanlatestportfolio.netlify.app/" target='_blank' className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                 <img src={my_logo} className="h-14 w-28 rounded-lg" alt=" Logo" />
                 <span className="self-center text-2xl font-semibold whitespace-nowrap text-white"></span>
             </Link>
@@ -30,7 +30,7 @@ const Footer = () => {
             </ul>
         </div>
         <hr className="my-8 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-lg  sm:text-center text-sky-400">© 2023 Designed & Developed By<Link to="https://merajulhasanlatestportfolio.netlify.app/" className="hover:underline text-sky-300 text-[18px] font-bold"> H.M Merajul Hasan</Link>. All Rights Reserved.</span>
+        <span className="block text-lg  sm:text-center text-sky-400">© 2023 Designed & Developed By<Link to="https://merajulhasanlatestportfolio.netlify.app/" target='_blank' className="hover:underline text-sky-300 text-[18px] font-bold"> H.M Merajul Hasan</Link>. All Rights Reserved.</span>
     </div>
 </footer>
 
