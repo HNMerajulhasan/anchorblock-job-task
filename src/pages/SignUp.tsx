@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { register, setAuthData } from '../features/authSlice';
 import { Link, useNavigate } from 'react-router-dom';
 import LRlogo from '../assests/loginRegisLogo.svg'
+import { AnyAction, ThunkDispatch } from '@reduxjs/toolkit';
 
 const SignUp: React.FC = () => {
   const dispatch = useDispatch();
@@ -10,23 +11,26 @@ const SignUp: React.FC = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
+  
     try {
-      const result = await dispatch(register({ email, password }));
+      const result = await (dispatch as ThunkDispatch<unknown, unknown, AnyAction>)(register({ email, password }));
       if (register.fulfilled.match(result)) {
         const { email, name, token } = result.payload;
         dispatch(setAuthData({ email, name, token }));
-        console.log(email,token)
-      
+        console.log(email, token);
+  
         navigate('/users');
       }
     } catch (error) {
-      console.error(error)
-     
+      console.error(error);
+      
     }
   };
+
+
 
   return (
     <div>

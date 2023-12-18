@@ -27,7 +27,7 @@ export const login = createAsyncThunk(
 
       return { ...data, email }; 
     } catch (error) {
-      throw new Error('Login failed: ' + error.message);
+      // throw new Error('Login failed: ' + error.message);
     }
   }
 );
@@ -54,7 +54,7 @@ export const register = createAsyncThunk(
 
       return { ...data, email }; 
     } catch (error) {
-      throw new Error('Registration failed: ' + error.message);
+      // throw new Error('Registration failed: ' + error.message);
     }
   }
 );
@@ -64,7 +64,7 @@ export const logout = createAsyncThunk('auth/logout', async (_, { dispatch }) =>
     dispatch(setAuthData({ token: '', email: '', name: '' }));
     return { success: true };
   } catch (error) {
-    throw new Error('Logout failed: ' + error.message);
+    // throw new Error('Logout failed: ' + error.message);
   }
 });
 
@@ -78,7 +78,7 @@ export const fetchUsersPage1 = createAsyncThunk('auth/fetchUsersPage1', async ()
     const data = await response.json();
     return data.data;
   } catch (error) {
-    throw new Error('Failed to fetch users: ' + error.message);
+    // throw new Error('Failed to fetch users: ' + error.message);
   }
 });
 
@@ -92,7 +92,7 @@ export const fetchUsersPage2 = createAsyncThunk('auth/fetchUsersPage2', async ()
     const data = await response.json();
     return data.data;
   } catch (error) {
-    throw new Error('Failed to fetch users: ' + error.message);
+    // throw new Error('Failed to fetch users: ' + error.message);
   }
 });
 
@@ -103,7 +103,7 @@ interface AuthState {
     email: string;
     name: string;
   };
-  users: Array<any>; 
+  users: Array<unknown>; 
 }
 
 const authSlice = createSlice({

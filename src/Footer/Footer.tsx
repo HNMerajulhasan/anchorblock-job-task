@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import portFolioIcn from '../assests/portfolio.png'
 import my_logo from '../assests/meraj_logo.jpg'

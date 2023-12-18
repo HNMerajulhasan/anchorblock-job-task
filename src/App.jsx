@@ -1,14 +1,14 @@
-import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import PrivateRoute from './components/PrivateRoute';
 import Main from './Layout/Main';
 import { Home } from './pages/Home/Home';
-import Users from './pages/Users';
 import Dashboard from './pages/Dashboard';
+import Users from './pages/Users';
 
-const App: React.FC = () => {
+
+const App = () => {
   const router = createBrowserRouter([
     {
       path:'/',
@@ -30,7 +30,7 @@ const App: React.FC = () => {
           path: '/users',
           element: (
             <PrivateRoute>
-              <Users />
+              <Users></Users>
             </PrivateRoute>
           ),
         },

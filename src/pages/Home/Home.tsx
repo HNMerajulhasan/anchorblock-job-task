@@ -1,4 +1,3 @@
-import React from 'react'
 import AuthImg2 from '../../assests/auth-2.webp'
 
 export const Home = () => {
