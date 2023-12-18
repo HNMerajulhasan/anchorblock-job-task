@@ -4,10 +4,12 @@ import { register, setAuthData } from '../features/authSlice';
 import { Link, useNavigate } from 'react-router-dom';
 import LRlogo from '../assests/loginRegisLogo.svg'
 
+
 const SignUp: React.FC = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -19,19 +21,20 @@ const SignUp: React.FC = () => {
         const { email, name, token } = result.payload;
         dispatch(setAuthData({ email, name, token }));
         console.log(email,token)
-        // Redirect or perform other actions after successful registration
-        navigate('/dashboard');
+     
+        navigate('/users');
       }
     } catch (error) {
-      // Handle registration error
+       console.error(error)
+       setError('Invalid email. Please try again.');
     }
   };
 
   return (
     <div>
-    <h2 className='text-center mt-14 text-3xl font-bold'>Please Sign In Here!</h2>
+    <h2 className='text-center mt-10 text-3xl font-bold'>Please Sign In Here!</h2>
     <div className='flex justify-center'>
-     <div className='form_style mt-14 p-14'>
+     <div className='form_style my-10 p-14'>
       <form onSubmit={handleSubmit} className='w-full'>
         <div className='flex items-center gap-4'>
            <img src={LRlogo} alt='logo'/>
@@ -52,6 +55,7 @@ const SignUp: React.FC = () => {
             required
           />
         </div>
+        {error && <p className='text-red-500'>{error}</p>}
 
         <div className='mt-5'>
           <div>

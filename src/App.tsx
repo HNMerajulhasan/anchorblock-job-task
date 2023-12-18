@@ -2,12 +2,11 @@ import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
-// import Users from './pages/Users';
 import PrivateRoute from './components/PrivateRoute';
-import Dashboard from './pages/Dashboard';
 import Main from './Layout/Main';
 import { Home } from './pages/Home/Home';
-import BlankDashboard from './pages/BlankDashboard';
+import Users from './pages/Users';
+import Dashboard from './pages/Dashboard';
 
 const App: React.FC = () => {
   const router = createBrowserRouter([
@@ -28,18 +27,18 @@ const App: React.FC = () => {
           element: <SignUp />,
         },
         {
-          path: '/dashboard',
+          path: '/users',
           element: (
             <PrivateRoute>
-              <Dashboard />
+              <Users />
             </PrivateRoute>
           ),
         },
         {
-          path: '/blankDashboard',
+          path: '/dashboard',
           element: (
             <PrivateRoute>
-              <BlankDashboard />
+              <Dashboard />
             </PrivateRoute>
           ),
         }

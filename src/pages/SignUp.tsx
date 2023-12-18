@@ -20,7 +20,7 @@ const SignUp: React.FC = () => {
         dispatch(setAuthData({ email, name, token }));
         console.log(email,token)
         // Redirect or perform other actions after successful registration
-        navigate('/dashboard');
+        navigate('/users');
       }
     } catch (error) {
       // Handle registration error
@@ -31,7 +31,7 @@ const SignUp: React.FC = () => {
     <div>
     <h2 className='text-center mt-14 text-3xl font-bold'>Please Sign Up Here!</h2>
     <div className='flex justify-center'>
-     <div className='form_style mt-14 p-14'>
+     <div className='form_style my-10 p-14'>
       <form onSubmit={handleSubmit} className='w-full'>
         <div className='flex items-center gap-4'>
            <img src={LRlogo} alt='logo'/>
