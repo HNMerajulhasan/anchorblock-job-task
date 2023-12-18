@@ -19,11 +19,12 @@ const SignUp: React.FC = () => {
         const { email, name, token } = result.payload;
         dispatch(setAuthData({ email, name, token }));
         console.log(email,token)
-        // Redirect or perform other actions after successful registration
+      
         navigate('/users');
       }
     } catch (error) {
-      // Handle registration error
+      console.error(error)
+     
     }
   };
 

@@ -26,38 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    // <div className='bg-[#6941c6] flex items-center gap-20 py-7 px-14'>
-    //   <div className='flex items-center gap-5'>
-    //     <img src={logo} alt='logo' />
-    //     <h3 className='text-[#fff] text-2xl font-bold'>Stack</h3>
-    //   </div>
-    //   <div className='flex text-[#fff] gap-8'>
-    //     <Link className='text-[#fff]' to='/'>
-    //       Home
-    //     </Link>
-    //     <Link className='text-[#fff]' to='/signIn'>
-    //       SignIn
-    //     </Link>
-    //     <Link className='text-[#fff]' to='/signUp'>
-    //       SignUp
-    //     </Link>
-    //     {isAuthenticated ? (
-    //       <>
-    //         <NavLink to='' className='text-[#fff]' onClick={handleLogout}>
-    //           Logout
-    //         </NavLink>
-           
-    //         <NavLink to='/users' className='text-[#fff]' onClick={handleUsersLinkClick}>
-    //           Users
-    //         </NavLink>
-       
-    //         <NavLink to='/dashboard' className='text-[#fff]' onClick={handleUsersLinkClick}>
-    //            Dashboard
-    //         </NavLink>
-    //       </>
-    //     ) : null}
-    //   </div>
-    // </div>
+ 
 <div>
 <nav id="navbar_container">
       <div className="navbar_large_device items-center px-14 gap-10">

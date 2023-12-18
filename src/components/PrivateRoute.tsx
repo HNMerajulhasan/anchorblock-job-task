@@ -12,12 +12,12 @@ const PrivateRoute: React.FC<PrivateRouteProps> = ({ children, ...rest }) => {
   const navigate = useNavigate();
 
   if (!isAuthenticated) {
-    // Redirect to the login page if not authenticated
-    navigate('/signin');
+   
+    navigate('/signIn');
     return null;
   }
 
-  // Render the protected route
+  
   return <>{children}</>;
 };
 
